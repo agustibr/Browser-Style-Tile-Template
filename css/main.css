@@ -1,0 +1,104 @@
+@charset "UTF-8";
+/* All over it. (Global) */
+@font-face { font-family: 'VerbMedium'; src: url("../fonts/VerbMedium-webfont.eot"); src: url("../fonts/VerbMedium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/VerbMedium-webfont.woff") format("woff"), url("../fonts/VerbMedium-webfont.ttf") format("truetype"), url("../fonts/VerbMedium-webfont.svg#verb_mediumregular") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'VerbLight'; src: url("../fonts/VerbLight-webfont.eot"); src: url("../fonts/VerbLight-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/VerbLight-webfont.woff") format("woff"), url("../fonts/VerbLight-webfont.ttf") format("truetype"), url("../fonts/VerbLight-webfont.svg#verb_lightregular") format("svg"); font-weight: normal; font-style: normal; }
+
+html, button, input, select, textarea { color: #000; font-family: "VerbLight", Helvetica, sans-serif; }
+
+body { width: 100%; margin: 0 0 20px; background: url(../img/swirl.png) repeat; }
+
+a { color: #4ecdc4; }
+a:hover { color: #ff6b6b; }
+a h1, a h2, a h3, a h4, a h5, a h6 { font-weight: 400; }
+
+.alignleft { float: left; }
+
+.alignright { float: right; }
+
+/* Up top! (Header) */
+header { color: #000; }
+
+header h1 { background: #FFF; float: left; font-size: 36px; width: auto; margin: 0 20px 0 30px; padding: 50px; font-family: "VerbMedium", Helvetica, sans-serif; box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1); }
+
+header h2 { background: #444444 url(../img/444noise.png); color: #FFF; margin: 0; padding: 10px; }
+
+header h4, header p { margin: 5px 0 0; }
+
+/* Your Body is a Wonderland (Body) */
+#wrapper { clear: both; margin: 20px 0; padding: 0 40px; }
+
+#elements, #words { width: 47%; }
+
+/* The colors, Duke, the colors! (#Colors) */
+#colors { clear: both; }
+
+.square, .bigsquare { box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1); float: left; height: 60px; width: 60px; margin: 0 15px 10px 0; padding: 1px; }
+
+#square-one, #square-two, #square-three, #square-four, #square-five { height: 100%; width: 100%; }
+
+#square-one { background: #556270; }
+
+#square-two { background: #4ecdc4; }
+
+#square-three { background: #c7f464; }
+
+#square-four { background: #ff6b6b; }
+
+#square-five { background: #c44d58; }
+
+/* Stroke the Furry Wall (#Textures) */
+#textures { clear: both; padding-top: 20px; }
+
+.bigsquare { height: 120px; width: 120px; }
+
+#texture-one, #texture-two, #texture-three { height: 100%; width: 100%; }
+
+#texture-one { background-image: url(../img/debut_light.png); }
+
+#texture-two { background-image: url(../img/grey.png); }
+
+#texture-three { background-image: url(../img/grid.png); }
+
+/* The Easy Button(s) (#Buttons) */
+#buttons { clear: both; padding-top: 20px; }
+#buttons a.btn { font-family: "VerbLight", Helvetica, sans-serif; text-transform: uppercase; font-size: 16px; float: left; text-decoration: none; margin: 0 15px 10px 0; padding: 12px 20px; border: 1px solid white; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.1); transition: all 1s; -webkit-transition: all 0.3s; }
+#buttons a.btn.button1 { background-color: #4ecdc4; color: white; }
+#buttons a.btn.button1:hover { background-color: #ff6b6b; color: black; }
+#buttons a.btn.button2 { background-color: #4ecdc4; color: white; }
+#buttons a.btn.button2:hover { background-color: #ff6b6b; color: black; }
+
+/* Gosling-Approved Typography (#Typography) */
+#typography h1 { font-size: 32px; font-weight: 700; line-height: 34px; margin: 0; color: #4ecdc4; }
+
+#typography h3 { font-size: 24px; line-height: 26px; margin: 20px 0 0; color: #ff6b6b; }
+
+#typography p { font-size: 14px; line-height: 22px; color: black; }
+
+.font { color: gray; font-size: 12px; margin: 0; }
+
+/* Redundant adjectives are redundant. (#Adjectives) */
+#adjectives span { font-size: 36px; margin-right: 30px; }
+
+/* Down low! (Footer) */
+footer { clear: both; color: gray; font-size: 14px; line-height: 22px; padding: 40px; }
+
+footer p { margin: 0; }
+
+footer .alignleft p { font-style: italic; }
+
+footer .alignright p { font-weight: 700; }
+
+/* Make it look good on your new-fangled Palm Pilot! (Media Queries) */
+@media (max-width: 600px) { #elements, #words { width: 100%; }
+  #colors, #textures, #buttons { padding-top: 10px; }
+  #typography { margin-top: 20px; } }
+@media (max-width: 400px) { header h1, header h2, header h4, header p { text-align: center; }
+  #logo h1 { float: none; display: block; margin: 0 auto; padding: 10px; } }
+/* If you're going to print it, you should probably use the PSD: http://styletil.es/downloads/Style_Tile_Template.psd.zip
+...but sometimes we have preemptive printers for bosses. :) So, let's make it one page, hide the footer, and ask Webkit to print background images. */
+@media print { * { -webkit-print-color-adjust: exact; overflow: hidden; box-shadow: none !important; }
+  #logo { overflow: visible; }
+  .square, .bigsquare { height: 40px; width: 40px; }
+  #colors, #textures, #buttons { padding-top: 5px; }
+  footer { display: none; } }
