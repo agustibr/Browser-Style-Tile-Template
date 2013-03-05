@@ -1,9 +1,6 @@
 @charset "UTF-8";
+@import url("../fonts/fontfiles.css");
 /* All over it. (Global) */
-@font-face { font-family: 'VerbMedium'; src: url("../fonts/VerbMedium-webfont.eot"); src: url("../fonts/VerbMedium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/VerbMedium-webfont.woff") format("woff"), url("../fonts/VerbMedium-webfont.ttf") format("truetype"), url("../fonts/VerbMedium-webfont.svg#verb_mediumregular") format("svg"); font-weight: normal; font-style: normal; }
-
-@font-face { font-family: 'VerbLight'; src: url("../fonts/VerbLight-webfont.eot"); src: url("../fonts/VerbLight-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/VerbLight-webfont.woff") format("woff"), url("../fonts/VerbLight-webfont.ttf") format("truetype"), url("../fonts/VerbLight-webfont.svg#verb_lightregular") format("svg"); font-weight: normal; font-style: normal; }
-
 html, button, input, select, textarea { color: #000; font-family: "VerbLight", Helvetica, sans-serif; }
 
 body { width: 100%; margin: 0 0 20px; background: url(../img/swirl.png) repeat; }
@@ -78,7 +75,12 @@ header h4, header p { margin: 5px 0 0; }
 .font { color: gray; font-size: 12px; margin: 0; }
 
 /* Redundant adjectives are redundant. (#Adjectives) */
-#adjectives span { font-size: 36px; margin-right: 30px; }
+p.adjectives span { font-size: 36px; margin-right: 30px; }
+p.adjectives span:nth-child(1) { color: #556270; }
+p.adjectives span:nth-child(2) { color: #4ecdc4; }
+p.adjectives span:nth-child(3) { color: #c7f464; }
+p.adjectives span:nth-child(4) { color: #ff6b6b; }
+p.adjectives span:nth-child(5) { color: #c44d58; }
 
 /* Down low! (Footer) */
 footer { clear: both; color: gray; font-size: 14px; line-height: 22px; padding: 40px; }
